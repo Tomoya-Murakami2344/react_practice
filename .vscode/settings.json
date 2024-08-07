@@ -1,0 +1,18 @@
+{
+  "editor.codeActionsOnSave": ["source.fixAll.eslint", "source.organizeImports"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[prisma]": { "editor.defaultFormatter": "Prisma.prisma" },
+  "json.schemaDownload.enable": true
+}

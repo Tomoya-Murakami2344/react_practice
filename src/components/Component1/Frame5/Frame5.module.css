@@ -1,0 +1,44 @@
+.frame3.frame3 {
+  width: initial;
+  align-self: stretch;
+}
+.frame3.frame3:hover {
+  background-color: #f0f0f0;
+}
+.frame4.frame4 {
+  width: initial;
+  align-self: stretch;
+}
+.frame4.frame4:hover {
+  background-color: #f0f0f0;
+}
+.unnamed {
+  color: #000;
+  font-size: 24px;
+  line-height: 130%;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.frame5.frame5 {
+  width: initial;
+  align-self: stretch;
+}
+.frame5.frame5:hover {
+  background-color: #f0f0f0;
+}
+.root {
+  width: 192px;
+  height: min-content;
+  flex-direction: column;
+  gap: 1px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}

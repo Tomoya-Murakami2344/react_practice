@@ -1,0 +1,20 @@
+.root {
+  width: 192px;
+  height: min-content;
+  justify-content: center;
+  padding: 10px;
+}
+.unnamed {
+  color: #000;
+  font-size: 24px;
+  line-height: 130%;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
