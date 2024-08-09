@@ -1,0 +1,36 @@
+.polygon.polygon {
+  width: 32px;
+  height: 32px;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
+.root {
+  width: min-content;
+  height: min-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  padding: 0px;
+  background-color: #fff;
+}
+.unnamed {
+  color: #000;
+  font-size: 24px;
+  line-height: 130%;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.PullDown {
+  gap: 100px;
+  padding: 10px;
+}

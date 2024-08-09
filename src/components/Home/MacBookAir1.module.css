@@ -1,0 +1,67 @@
+.rectangle8.rectangle8.rectangle8 {
+  background-image:/* webpackIgnore: true */ url('assets/vege.png');
+}
+.rectangle82.rectangle82.rectangle82 {
+  background-image:/* webpackIgnore: true */ url('assets/rectangle84.png');
+}
+.rectangle83.rectangle83.rectangle83 {
+  background-image:/* webpackIgnore: true */ url('assets/rectangle85.png');
+}
+.rectangle84.rectangle84.rectangle84 {
+  background-image:/* webpackIgnore: true */ url('assets/rectangle86.png');
+}
+.rectangle85.rectangle85.rectangle85 {
+  background-image:/* webpackIgnore: true */ url('assets/rectangle87.png');
+}
+.rectangle86.rectangle86.rectangle86 {
+  background-image:/* webpackIgnore: true */ url('assets/rectangle88.png');
+}
+.rectangle87.rectangle87.rectangle87 {
+  background-image:/* webpackIgnore: true */ url('assets/rectangle89.png');
+}
+.component3 {
+  /* position: relative; */
+  left: 42.5%;
+  top: 0;
+}
+.component2 {
+  left: 82.5%;
+  /* left: 1070px; */
+  top: 0;
+}
+.rectangle12.rectangle12 {
+  background-color: #6ffd8e80;
+}
+.root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* width: 1280px;
+  height: 832px; */
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow: hidden;
+}
+.rectangle11 {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 69px;
+  background-color: #ffe176;
+}
+.frame8 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* left: 100;
+  top: 69px;
+  width: 1280px;
+  height: 763px; */
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 50px 25px;
+  padding: 50px 30px;
+  overflow: hidden;
+}

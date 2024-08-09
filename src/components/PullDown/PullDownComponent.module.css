@@ -1,0 +1,10 @@
+.root {
+  position: relative;
+  width:155px;
+  height: 70px;
+  flex-direction: column;
+  align-items: flex-start;
+  /* outline: dashed 1px #9747ff; */
+  outline-offset: -1px;
+  border-radius: 5px;
+}
