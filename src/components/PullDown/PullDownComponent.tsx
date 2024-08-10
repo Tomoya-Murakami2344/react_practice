@@ -10,11 +10,10 @@ import { Component1_Property1Frame2 } from "./Component1_Property1Frame2/Compone
 
 interface Props {
   className?: string;
+  setCategory: (category: string) => void;
 }
 /* @figmaId 603:56 */
-export const PullDownComponent: FC<Props> = memo(function Component1(
-  props = {}
-) {
+export const PullDownComponent: FC<Props> = memo(function Component1(props) {
   const [chosenOption, setChosenOption] = useState<string | null>(null);
   const [showSecondComponent, setShowSecondComponent] = useState(false);
 
@@ -29,23 +28,30 @@ export const PullDownComponent: FC<Props> = memo(function Component1(
   };
 
   return (
-    <div className={`${resets.clapyResets} ${classes.root} ${props.className || ""}`}>
-          {chosenOption ? (
-            <Component1_Property1Frame1
-              onClick={handleComponentClick}
-              text={chosenOption}
-            />
-          ) : showSecondComponent ? (
-            <Component1_Property1Frame1
-              onClick={handleComponentClick}
-              text="カテゴリ"
-            />
-          ) : (
-            <Component1_Property1Frame2
-              onClick={handleComponentClick}
-              chooseOption={setChosenOptionString}
-            />
-          )}
+    <div
+      className={`${resets.clapyResets} ${classes.root} ${
+        props.className || ""
+      }`}
+    >
+      {chosenOption ? (
+        <Component1_Property1Frame1
+          onClick={handleComponentClick}
+          text={chosenOption}
+        />
+      ) : showSecondComponent ? (
+        <Component1_Property1Frame1
+          onClick={handleComponentClick}
+          text="カテゴリ"
+        />
+      ) : (
+        <Component1_Property1Frame2
+          onClick={handleComponentClick}
+          chooseOption={(e) => {
+            setChosenOptionString(e);
+            props.setCategory(e.target.textContent);
+          }}
+        />
+      )}
     </div>
   );
 });

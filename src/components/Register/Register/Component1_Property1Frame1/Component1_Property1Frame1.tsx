@@ -12,9 +12,10 @@ interface Props {
   classes?: {
     root?: string;
   };
+  setCategory: (category: string) => void;
 }
 /* @figmaId 603:55 */
-export const Component1_Property1Frame1: FC<Props> = memo(function Component1_Property1Frame1(props = {}) {
+export const Component1_Property1Frame1: FC<Props> = memo(function Component1_Property1Frame1(props) {
   return (
     <div className={`${resets.clapyResets} ${props.classes?.root || ''} ${props.className || ''} ${classes.root}`}>
       {/* <div className={classes.unnamed}>カテゴリ</div>
@@ -24,7 +25,7 @@ export const Component1_Property1Frame1: FC<Props> = memo(function Component1_Pr
           polygon1: <Polygon1Icon className={classes.icon} />,
         }}
       /> */}
-      <PullDownComponent className={classes.PullDown} />
+      <PullDownComponent className={classes.PullDown} setCategory={props.setCategory} />
     </div>
   );
 });

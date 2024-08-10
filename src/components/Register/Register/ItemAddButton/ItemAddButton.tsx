@@ -10,9 +10,10 @@ interface Props {
   classes?: {
     rectangle12?: string;
   };
+  onClick?: () => void;
 }
 /* @figmaId 679:539 */
-export const Component2_1: FC<Props> = memo(function Component2_1(props = {}) {
+export const AddButton: FC<Props> = memo(function Component2_1(props = {}) {
   const navigate = useNavigate();
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
@@ -23,6 +24,7 @@ export const Component2_1: FC<Props> = memo(function Component2_1(props = {}) {
         className={classes.unnamed}
         onClick={() => {
           navigate("/");
+          props.onClick && props.onClick();
         }}
       >
         追加
