@@ -16,10 +16,10 @@ interface Props {
     rectangle8?: string;
     trashIcon?: string;
   };
-  Item?: ItemList;
+  Item: ItemList;
 }
 /* @figmaId 679:109 */
-export const Item_1: FC<Props> = memo(function Item_1(props = {}) {
+export const Item_1: FC<Props> = memo(function Item_1(props) {
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
       <Group2_Property1Vege
@@ -50,6 +50,7 @@ export const Item_1: FC<Props> = memo(function Item_1(props = {}) {
         classes={{
           trashIcon: `${props.classes?.trashIcon || ""} ${classes.rectangle13}`,
         }}
+        docId={props.Item?.documentId}
       />
     </div>
   );

@@ -1,6 +1,9 @@
 .group2.group2 {
   z-index: 0;
 }
+.category.category {
+  z-index: 1;
+}
 .rectangle8.rectangle8 {
   background-image:/* webpackIgnore: true */ url('assets/rectangle82.png');
 }

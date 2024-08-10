@@ -34,7 +34,8 @@ export const Register: FC<Props> = memo(function Register(props = {}) {
         name: name,
         category: category,
         priority: priority,
-        created_at: getStrTime(new Date().getTime()),
+        created_at: new Date().getTime(),
+        created_at_f: getStrTime(new Date().getTime()),
       });
       setName("");
       setCategory("");
