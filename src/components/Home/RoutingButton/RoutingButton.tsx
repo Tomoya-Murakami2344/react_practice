@@ -3,7 +3,7 @@ import { memo } from "react";
 import { useNavigate } from "react-router-dom";
 
 import resets from "../../_resets.module.css";
-import classes from "./Component2_12.module.css";
+import classes from "./RoutingButton.module.css";
 
 interface Props {
   className?: string;
@@ -11,11 +11,11 @@ interface Props {
     rectangle12?: string;
     root?: string;
   };
+  text?: string;
+  navigateTo: string;
 }
 /* @figmaId 679:539 */
-export const Component2_12: FC<Props> = memo(function Component2_12(
-  props = {}
-) {
+export const RoutingButton: FC<Props> = memo(function Component2_12(props) {
   const navigate = useNavigate();
   return (
     <div
@@ -29,10 +29,10 @@ export const Component2_12: FC<Props> = memo(function Component2_12(
       <button
         className={classes.unnamed}
         onClick={() => {
-          navigate("/Register");
+          navigate(props.navigateTo);
         }}
       >
-        追加画面へ
+        {props.text}
       </button>
     </div>
   );

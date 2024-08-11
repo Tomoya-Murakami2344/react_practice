@@ -1,0 +1,36 @@
+.root {
+  position: relative;
+  width: 34px;
+  height: 31px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ellipse279 {
+  position: absolute;
+  left: -10px;
+  top: -9px;
+  width: 53px;
+  height: 50px;
+  overflow: visible;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
+.unnamed {
+  color: #000;
+  font-size: 10px;
+  line-height: 130%;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 14.7059%;
+  right: 14.7059%;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

@@ -3,13 +3,13 @@ import type { FC } from "react";
 import { memo, useEffect, useState } from "react";
 
 import { DocumentData } from "@firebase/firestore-types";
-import { db } from "../../firebase";
+import { db } from "../../db/initialize";
 import { ItemList } from "../../interface/ItemList";
 import resets from "../_resets.module.css";
-import { Component2_1 } from "./Component2_1/Component2_1";
-import { Component2_12 } from "./Component2_12/Component2_12";
 import classes from "./HomeComponent.module.css";
-import { Item_1 } from "./Item_1/Item_1";
+import { Items } from "./Items/Item";
+import { RoutingButton } from "./RoutingButton/RoutingButton";
+import { TopBar } from "./TopBar/TopBar";
 
 interface Props {
   className?: string;
@@ -41,7 +41,7 @@ export const HomeComponent: FC<Props> = memo(function MacBookAir1(props = {}) {
         {posts.map((post, index) => {
           try {
             return (
-              <Item_1
+              <Items
                 key={index}
                 classes={{
                   rectangle8: classes.rectangle8,
@@ -55,10 +55,18 @@ export const HomeComponent: FC<Props> = memo(function MacBookAir1(props = {}) {
           }
         })}
       </div>
-      <Component2_1 className={classes.component3} />
-      <Component2_12
-        className={classes.component2}
+      <TopBar className={classes.component3} />
+      <RoutingButton
+        className={classes.componentAdd}
         classes={{ rectangle12: classes.rectangle12 }}
+        navigateTo="/Register"
+        text="追加画面へ"
+      />
+      <RoutingButton
+        className={classes.componentLogOut}
+        classes={{ rectangle12: classes.rectangle12 }}
+        navigateTo="/"
+        text="ログアウト"
       />
     </div>
   );

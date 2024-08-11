@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { firebase } from "../../../db/firebase";
 import { ItemList } from "../../../interface/ItemList";
 import resets from "../../_resets.module.css";
-import classes from "./Group2_Property1Vege.module.css";
+import classes from "./DisplayVege.module.css";
 
 interface Props {
   className?: string;
@@ -16,8 +16,8 @@ interface Props {
   Item: ItemList;
 }
 /* @figmaId 601:23 */
-export const Group2_Property1Vege: FC<Props> = memo(
-  function Group2_Property1Vege(props) {
+export const DisplayVege: FC<Props> = memo(
+  function DisplayVege(props) {
     const itemImage = ((item: ItemList) => {
       if (item.category === "野菜") return classes.vege;
       if (item.category === "タンパク質") return classes.protein;

@@ -5,10 +5,10 @@ import { ItemList } from "../../../interface/ItemList";
 import resets from "../../_resets.module.css";
 import { _label2 } from "../_label2/_label2";
 import { _label3 } from "../_label3/_label3";
-import { Group2_Property1InputForm } from "../Group2_Property1InputForm/Group2_Property1InputForm";
-import { Group2_Property1TrashIcon } from "../Group2_Property1TrashIcon/Group2_Property1TrashIcon";
-import { Group2_Property1Vege } from "../Group2_Property1Vege/Group2_Property1Vege";
-import classes from "./Item_1.module.css";
+import { DisplayVege } from "../DisplayVege/DisplayVege";
+import { InputForm } from "../InputForm/InputForm";
+import { TrashIcon } from "../TrashIcon/TrashIcon";
+import classes from "./Item.module.css";
 
 interface Props {
   className?: string;
@@ -19,11 +19,11 @@ interface Props {
   Item: ItemList;
 }
 /* @figmaId 679:109 */
-export const Item_1: FC<Props> = memo(function Item_1(props) {
+export const Items: FC<Props> = memo(function Item_1(props) {
   useEffect(() => {}, [props.Item]);
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
-      <Group2_Property1Vege
+      <DisplayVege
         className={classes.group2}
         classes={
           {
@@ -34,7 +34,7 @@ export const Item_1: FC<Props> = memo(function Item_1(props) {
         }
         Item={props.Item || {}}
       />
-      <Group2_Property1InputForm
+      <InputForm
         className={classes.group22}
         swap={{
           unnamed: <_label2 className={classes.unnamed} />,
@@ -43,7 +43,7 @@ export const Item_1: FC<Props> = memo(function Item_1(props) {
         value={props.Item?.category || ""}
         genre="category"
       />
-      <Group2_Property1InputForm
+      <InputForm
         className={classes.group23}
         swap={{
           unnamed: <_label3 className={classes.unnamed} />,
@@ -52,7 +52,7 @@ export const Item_1: FC<Props> = memo(function Item_1(props) {
         value={props.Item?.priority || ""}
         genre="priority"
       />
-      <Group2_Property1TrashIcon
+      <TrashIcon
         className={classes.group24}
         classes={{
           trashIcon: `${props.classes?.trashIcon || ""} ${classes.rectangle13}`,

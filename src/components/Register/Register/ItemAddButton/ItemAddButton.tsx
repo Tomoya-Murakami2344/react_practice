@@ -23,7 +23,7 @@ export const AddButton: FC<Props> = memo(function Component2_1(props = {}) {
       <button
         className={classes.unnamed}
         onClick={() => {
-          navigate("/");
+          navigate("/Home");
           props.onClick && props.onClick();
         }}
       >

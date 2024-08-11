@@ -5,21 +5,12 @@ import { useState } from "react";
 import resets from "../_resets.module.css";
 import classes from "./PullDownComponent.module.css";
 
-import { Component1_Property1Frame1 } from "./Component1_Property1Frame1/Component1_Property1Frame1";
-import { Component1_Property1Frame2 } from "./Component1_Property1Frame2/Component1_Property1Frame2";
+import { PDDefault } from "./PDDefault/PDDefault";
+import { PDOps } from "./PDOps/PDOps";
 
 interface Props {
   className?: string;
 }
-interface Option {
-  value: string;
-  label: string;
-}
-const options: Option[] = [
-  { value: "option1", label: "Option 1" },
-  { value: "option2", label: "Option 2" },
-  { value: "option3", label: "Option 3" },
-];
 /* @figmaId 603:56 */
 export const Component1: FC<Props> = memo(function Component1(props = {}) {
   const [chosenOption, setChosenOption] = useState<string | null>(null);
@@ -40,17 +31,11 @@ export const Component1: FC<Props> = memo(function Component1(props = {}) {
       <div className="App">
         <header className="App-header">
           {chosenOption ? (
-            <Component1_Property1Frame1
-              onClick={handleComponentClick}
-              text={chosenOption}
-            />
+            <PDDefault onClick={handleComponentClick} text={chosenOption} />
           ) : showSecondComponent ? (
-            <Component1_Property1Frame1
-              onClick={handleComponentClick}
-              text="カテゴリ"
-            />
+            <PDDefault onClick={handleComponentClick} text="カテゴリ" />
           ) : (
-            <Component1_Property1Frame2
+            <PDOps
               onClick={handleComponentClick}
               chooseOption={setChosenOptionString}
             />

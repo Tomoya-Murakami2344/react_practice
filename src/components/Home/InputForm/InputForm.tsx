@@ -6,7 +6,7 @@ import { firebase } from "../../../db/firebase";
 import { ItemList } from "../../../interface/ItemList";
 import resets from "../../_resets.module.css";
 import { _label } from "../_label/_label";
-import classes from "./Group2_Property1InputForm.module.css";
+import classes from "./InputForm.module.css";
 
 interface Props {
   className?: string;
@@ -21,7 +21,7 @@ interface Props {
   genre: string;
 }
 /* @figmaId 602:90 */
-export const Group2_Property1InputForm: FC<Props> = memo(
+export const InputForm: FC<Props> = memo(
   function Group2_Property1InputForm(props) {
     const [name, setName] = useState<string>(props.value);
     const FB = new firebase("posts");
