@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { memo } from "react";
+import { memo, useEffect } from "react";
 
 import { ItemList } from "../../../interface/ItemList";
 import resets from "../../_resets.module.css";
@@ -20,15 +20,18 @@ interface Props {
 }
 /* @figmaId 679:109 */
 export const Item_1: FC<Props> = memo(function Item_1(props) {
+  useEffect(() => {}, [props.Item]);
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
       <Group2_Property1Vege
         className={classes.group2}
-        classes={{
-          rectangle8: `${props.classes?.rectangle8 || ""} ${
-            classes.rectangle8
-          }`,
-        }}
+        classes={
+          {
+            // rectangle8: `${props.classes?.rectangle8 || ""} ${
+            //   classes.rectangle8
+            // }`,
+          }
+        }
         Item={props.Item || {}}
       />
       <Group2_Property1InputForm
@@ -36,14 +39,18 @@ export const Item_1: FC<Props> = memo(function Item_1(props) {
         swap={{
           unnamed: <_label2 className={classes.unnamed} />,
         }}
-        category={props.Item?.category}
+        Item={props.Item}
+        value={props.Item?.category || ""}
+        genre="category"
       />
       <Group2_Property1InputForm
         className={classes.group23}
         swap={{
           unnamed: <_label3 className={classes.unnamed} />,
         }}
-        category={props.Item?.priority}
+        Item={props.Item}
+        value={props.Item?.priority || ""}
+        genre="priority"
       />
       <Group2_Property1TrashIcon
         className={classes.group24}

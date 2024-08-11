@@ -1,7 +1,6 @@
 import type { FC } from "react";
 import { memo } from "react";
 
-import { useState } from "react";
 import resets from "../../_resets.module.css";
 import classes from "./Group2_Property1Vege.module.css";
 
@@ -16,7 +15,6 @@ interface Props {
 /* @figmaId 601:23 */
 export const Group2_Property1Vege: FC<Props> = memo(
   function Group2_Property1Vege(props) {
-    const [inputValue, setInputValue] = useState("");
     return (
       <div
         className={`${resets.clapyResets} ${props.classes?.root || ""} ${
@@ -33,8 +31,9 @@ export const Group2_Property1Vege: FC<Props> = memo(
             type="text"
             className={classes.unnamed}
             placeholder="名称"
-            onChange={(e) => setInputValue(e.target.value)}
-            onKeyDown={() => props.setName(inputValue)}
+            onChange={(e) => {
+              props.setName(e.target.value);
+            }}
           />
         </div>
       </div>

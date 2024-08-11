@@ -11,11 +11,12 @@ import { Component1_Property1Frame2 } from "./Component1_Property1Frame2/Compone
 interface Props {
   className?: string;
   setCategory: (category: string) => void;
+  genre?: string;
 }
 /* @figmaId 603:56 */
 export const PullDownComponent: FC<Props> = memo(function Component1(props) {
   const [chosenOption, setChosenOption] = useState<string | null>(null);
-  const [showSecondComponent, setShowSecondComponent] = useState(false);
+  const [showSecondComponent, setShowSecondComponent] = useState(true);
 
   const handleComponentClick = () => {
     if (chosenOption) setChosenOption(null);
@@ -41,7 +42,7 @@ export const PullDownComponent: FC<Props> = memo(function Component1(props) {
       ) : showSecondComponent ? (
         <Component1_Property1Frame1
           onClick={handleComponentClick}
-          text="カテゴリ"
+          text={props.genre || "カテゴリ"}
         />
       ) : (
         <Component1_Property1Frame2
@@ -50,6 +51,7 @@ export const PullDownComponent: FC<Props> = memo(function Component1(props) {
             setChosenOptionString(e);
             props.setCategory(e.target.textContent);
           }}
+          genre={props.genre}
         />
       )}
     </div>

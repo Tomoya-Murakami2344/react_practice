@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { memo, useState } from "react";
 
+import { firebase } from "../../../db/firebase";
 import resets from "../_resets.module.css";
 import { _label3 } from "./_label3/_label3";
 import { Component2_12 } from "./Component2_12/Component2_12";
@@ -8,9 +9,6 @@ import { Group2_Property1Category } from "./Group2_Property1Category/Group2_Prop
 import { AddButton } from "./ItemAddButton/ItemAddButton";
 import { Item_1Register } from "./ItemRegisterFields/ItemRegisterFields";
 import classes from "./Register.module.css";
-
-import { addDoc, collection } from "firebase/firestore";
-import { db } from "../../../firebase";
 
 interface Props {
   className?: string;
@@ -21,6 +19,7 @@ const getStrTime = (time: number) => {
     t.getMonth() + 1
   }/${t.getDate()} ${t.getHours()}:${t.getMinutes()}:${t.getSeconds()}`;
 };
+const FB = new firebase("posts");
 /* @figmaId 679:1003 */
 export const Register: FC<Props> = memo(function Register(props = {}) {
   const [name, setName] = useState("");
@@ -28,9 +27,8 @@ export const Register: FC<Props> = memo(function Register(props = {}) {
   const [priority, setPriority] = useState("");
 
   const onSubmit = async () => {
-    console.log(name, category, priority);
     try {
-      await addDoc(collection(db, "posts"), {
+      await FB.add({
         name: name,
         category: category,
         priority: priority,

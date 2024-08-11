@@ -24,7 +24,11 @@ export const HomeComponent: FC<Props> = memo(function MacBookAir1(props = {}) {
         posts.docs
           // documentIdを追加
           .map((post) => {
-            return { documentId: post.id, ...post.data(), created_at: post.data().created_at };
+            return {
+              documentId: post.id,
+              ...post.data(),
+              created_at: post.data().created_at,
+            };
           })
           .sort((a, b) => b.created_at - a.created_at)
       );
@@ -48,7 +52,6 @@ export const HomeComponent: FC<Props> = memo(function MacBookAir1(props = {}) {
             );
           } catch (error) {
             console.log(error);
-            // Slack通知またはSentry通知
           }
         })}
       </div>

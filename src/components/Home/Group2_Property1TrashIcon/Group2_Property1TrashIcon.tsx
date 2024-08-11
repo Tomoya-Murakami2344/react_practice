@@ -47,7 +47,9 @@ export const Group2_Property1TrashIcon: FC<Props> = memo(
           />
           <button
             className={classes.unnamed2}
-            onClick={() => deleteDocument("posts", props.docId)}
+            onClick={() => {
+              deleteDocument("posts", props.docId);
+            }}
           >
             削除
           </button>

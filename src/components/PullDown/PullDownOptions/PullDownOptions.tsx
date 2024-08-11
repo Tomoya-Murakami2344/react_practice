@@ -3,7 +3,7 @@ import { memo } from "react";
 
 import resets from "../../_resets.module.css";
 import { Frame3_Property1Default } from "../Frame3_Property1Default/Frame3_Property1Default";
-import classes from "./Frame5.module.css";
+import classes from "./PullDownOptions.module.css";
 
 interface Props {
   className?: string;
@@ -11,9 +11,11 @@ interface Props {
     root?: string;
   };
   chooseOption: (event: any) => void;
+  // 長さが3の文字列の配列
+  genre?: string;
 }
 /* @figmaId 603:74 */
-export const Frame5: FC<Props> = memo(function Frame5(
+export const PullDownOptions: FC<Props> = memo(function Frame5(
   props = { chooseOption: (e: any) => {} }
 ) {
   return (
@@ -25,16 +27,17 @@ export const Frame5: FC<Props> = memo(function Frame5(
       <Frame3_Property1Default
         className={classes.frame3}
         chooseOption={props.chooseOption}
+        text={props.genre == "優先度" ? "高" : "野菜"}
       />
       <Frame3_Property1Default
         className={classes.frame4}
         chooseOption={props.chooseOption}
-        text="タンパク質"
+        text={props.genre == "優先度" ? "中" : "タンパク質"}
       />
       <Frame3_Property1Default
         className={classes.frame5}
         chooseOption={props.chooseOption}
-        text="きのこ"
+        text={props.genre == "優先度" ? "低" : "きのこ"}
       />
     </div>
   );

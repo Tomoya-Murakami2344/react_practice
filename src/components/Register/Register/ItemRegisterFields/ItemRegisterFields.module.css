@@ -2,10 +2,11 @@
   z-index: 0;
 }
 .category.category {
-  z-index: 1;
+  z-index: 2;
+  display: flex;
 }
 .rectangle8.rectangle8 {
-  background-image:/* webpackIgnore: true */ url('assets/rectangle82.png');
+  background-image:/* webpackIgnore: true */ url("assets/rectangle82.png");
 }
 .group22.group22 {
   z-index: 0;
@@ -14,7 +15,7 @@
   z-index: 0;
 }
 .group23.group23 {
-  z-index: 0;
+  z-index: 1;
 }
 .unnamed2.unnamed2 {
   z-index: 0;

@@ -13,8 +13,10 @@
   left: 10px;
   top: 10px;
   width: 222px;
-  height: min-content;
+  height: 56px;
+  /* height: min-content; */
   align-items: center;
+  gap: 20px;
   padding: 10px;
   outline: solid 1px #d9d9d9;
   outline-offset: -1px;
@@ -26,8 +28,8 @@
   font-size: 24px;
   line-height: 130%;
   font-weight: 600;
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   z-index: 0;
   width: 172px;
   height: 36px;
@@ -35,4 +37,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.PullDown {
+  gap: 100px;
+  padding: 10px;
+  z-index: 3;
 }

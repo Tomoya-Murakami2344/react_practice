@@ -1,7 +1,7 @@
 import type { FC, ReactNode } from "react";
 import { memo } from "react";
 
-import { useState } from "react";
+import { PullDownComponent } from "../../../PullDown/PullDownComponent";
 import resets from "../../_resets.module.css";
 import { _label } from "../_label/_label";
 import classes from "./Group2_Property1InputForm.module.css";
@@ -19,7 +19,6 @@ interface Props {
 /* @figmaId 602:90 */
 export const Group2_Property1InputForm: FC<Props> = memo(
   function Group2_Property1InputForm(props) {
-    const [inputValue, setInputValue] = useState("");
     return (
       <div
         className={`${resets.clapyResets} ${props.classes?.root || ""} ${
@@ -29,12 +28,18 @@ export const Group2_Property1InputForm: FC<Props> = memo(
         <div className={classes.frame2}>
           {props.swap?.unnamed || <_label className={classes.unnamed} />}
           {/* <div className={classes.unnamed2}>アイテム</div> */}
-          <input
+          {/* <input
             type="text"
             className={classes.unnamed2}
             placeholder="優先度"
-            onChange={(e) => setInputValue(e.target.value)}
-            onKeyDown={() => props.setPriority(inputValue)}
+            onChange={(e) => {
+              props.setPriority(e.target.value);
+            }}
+          /> */}
+          <PullDownComponent
+            className={classes.PullDown}
+            setCategory={props.setPriority}
+            genre={"優先度"}
           />
         </div>
       </div>
