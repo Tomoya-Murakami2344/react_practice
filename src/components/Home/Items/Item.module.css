@@ -2,7 +2,7 @@
   z-index: 0;
 }
 .rectangle8.rectangle8 {
-  background-image:/* webpackIgnore: true */ url('assets/rectangle82.png');
+  background-image:/* webpackIgnore: true */ url("assets/rectangle8.png");
 }
 .group22.group22 {
   z-index: 0;
@@ -17,7 +17,7 @@
   z-index: 0;
 }
 .rectangle13.rectangle13.rectangle13 {
-  background-image:/* webpackIgnore: true */ url('assets/rectangle133.jpeg');
+  background-image:/* webpackIgnore: true */ url("assets/rectangle13.jpeg");
 }
 .root {
   width: 285px;

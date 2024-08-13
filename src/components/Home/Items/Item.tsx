@@ -23,17 +23,7 @@ export const Items: FC<Props> = memo(function Item_1(props) {
   useEffect(() => {}, [props.Item]);
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
-      <DisplayVege
-        className={classes.group2}
-        classes={
-          {
-            // rectangle8: `${props.classes?.rectangle8 || ""} ${
-            //   classes.rectangle8
-            // }`,
-          }
-        }
-        Item={props.Item || {}}
-      />
+      <DisplayVege className={classes.group2} Item={props.Item || {}} />
       <InputForm
         className={classes.group22}
         swap={{
