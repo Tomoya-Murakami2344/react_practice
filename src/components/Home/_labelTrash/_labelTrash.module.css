@@ -24,7 +24,7 @@
   top: -2px;
   width: 35px;
   height: 35px;
-  background-image:/* webpackIgnore: true */ url('assets/rectangle13.jpeg');
+  background-image: url("../../../../public/assets/trashIcon.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

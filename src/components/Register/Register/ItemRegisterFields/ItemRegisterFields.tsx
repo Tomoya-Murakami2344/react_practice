@@ -30,15 +30,13 @@ export const Item_1Register: FC<Props> = memo(function Item_1Register(props) {
       <Group2_Property1Vege
         className={classes.group2}
         classes={{
-          rectangle8: `${props.classes?.rectangle8 || ""} ${
-            classes.rectangle8
-          }`,
+          rectangle8: `${classes.rectangle8}`,
         }}
         setName={props.setValue.setNames}
       />
       <Group2_Property1Category
         className={classes.category}
-        classes={{ rectangle8: props.classes?.rectangle8 }}
+        classes={{ rectangle8: `${classes.rectangle8}` }}
         setCategory={props.setValue.setCategory}
       />
       <Group2_Property1InputForm

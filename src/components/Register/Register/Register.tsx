@@ -51,7 +51,6 @@ export const Register: FC<Props> = memo(function Register(props = {}) {
             group2: (
               <Group2_Property1Category
                 className={classes.group2}
-                classes={{ rectangle8: classes.rectangle8 }}
                 setCategory={setCategory}
               />
             ),
