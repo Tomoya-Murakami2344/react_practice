@@ -36,7 +36,21 @@ export const HomeComponent: FC<Props> = memo(function MacBookAir1(props = {}) {
   }, []);
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
-      <div className={classes.rectangle11}></div>
+      <div className={classes.rectangle11}>
+        <TopBar className={classes.Ichiran} />
+        <RoutingButton
+          className={classes.componentAdd}
+          classes={{ rectangle12: classes.rectangle12 }}
+          navigateTo="/Register"
+          text="追加画面へ"
+        />
+        <RoutingButton
+          className={classes.componentLogOut}
+          classes={{ rectangle12: classes.rectangle12 }}
+          navigateTo="/"
+          text="ログアウト"
+        />
+      </div>
       <div className={classes.frame8}>
         {posts.map((post, index) => {
           try {
@@ -55,19 +69,6 @@ export const HomeComponent: FC<Props> = memo(function MacBookAir1(props = {}) {
           }
         })}
       </div>
-      <TopBar className={classes.component3} />
-      <RoutingButton
-        className={classes.componentAdd}
-        classes={{ rectangle12: classes.rectangle12 }}
-        navigateTo="/Register"
-        text="追加画面へ"
-      />
-      <RoutingButton
-        className={classes.componentLogOut}
-        classes={{ rectangle12: classes.rectangle12 }}
-        navigateTo="/"
-        text="ログアウト"
-      />
     </div>
   );
 });

@@ -1,7 +1,5 @@
 .root {
-  position: absolute;
-  left: 20px;
-  top: 105px;
+  position: relative;
   width: 196px;
   height: 65px;
   flex-direction: column;
@@ -22,8 +20,8 @@
   font-size: 24px;
   line-height: 130%;
   font-weight: 600;
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   position: absolute;
   left: 13.7755%;
   right: 13.7755%;
