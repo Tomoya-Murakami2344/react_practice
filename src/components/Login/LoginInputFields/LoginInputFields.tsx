@@ -30,7 +30,7 @@ export const LoginInputFields: FC<Props> = memo(function Item_1Register(props) {
         className={classes.group22}
         swap={{
           unnamed: props.swap?.unnamed || (
-            <_label2 className={classes.unnamed} />
+            <_label2 className={classes.unnamed} texts="User" />
           ),
         }}
         placeholder="ユーザー名"
@@ -40,7 +40,7 @@ export const LoginInputFields: FC<Props> = memo(function Item_1Register(props) {
         className={classes.group22}
         swap={{
           unnamed: props.swap?.unnamed || (
-            <_label2 className={classes.unnamed} />
+            <_label2 className={classes.unnamed} texts="Pass" />
           ),
         }}
         placeholder="パスワード"
